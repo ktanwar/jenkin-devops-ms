@@ -10,6 +10,7 @@ pipeline {
 		stage('Test'){
 			steps{
 				sh 'docker pull mysql'
+				sh 'mvn -version'
 				echo 'Test'
 			}
 		}
