@@ -1,13 +1,15 @@
 pipeline {
-	agent any
+	agent {docker {image 'maven:3.6.5'}}
 	stages{
 		stage('Build'){
 			steps{
+				sh 'docker --version'
 				echo 'stage'
 			}
 		}
 		stage('Test'){
 			steps{
+				sh 'docker pull mysql'
 				echo 'Test'
 			}
 		}
