@@ -11,7 +11,8 @@ pipeline {
 				echo 'Build Test'
 			}
 		}
-	} post{
+	} 
+	post{
 		always{
 			echo 'always'
 		}
