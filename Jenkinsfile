@@ -11,6 +11,19 @@ pipeline {
 				echo 'Build Test'
 			}
 		}
+	} post{
+		always{
+			echo 'always'
+		}
+		success{
+			echo 'success'
+		}
+		failure{
+			echo 'failure'
+		}
+		changed{
+			echo 'changed'
+		}
 	}
 	
 }
