@@ -3,7 +3,7 @@ pipeline {
 	//agent { docker {image 'maven:3.6.3'}}
 	environment{
 		mavenHome = tool 'myMaven'
-		PATH = $PATH + '$mavenHome/bin'
+		PATH = '$PATH' + '$mavenHome/bin'
 	}
 	stages{
 		stage('Build'){
