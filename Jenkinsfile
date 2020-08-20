@@ -5,6 +5,9 @@ pipeline {
 		stage('Build'){
 			steps{
 				echo 'stage Build'
+				echo sh 'mvn --version'
+				echo sh 'docker version'
+				echo 'PATH - $PATH'
 			}
 		}
 		stage('Test'){
@@ -14,18 +17,10 @@ pipeline {
 		}
 	} 
 	post{
-		always{
-			echo 'always'
-		}
-		success{
-			echo 'success'
-		}
-		failure{
-			echo 'failure'
-		}
-		changed{
-			echo 'changed'
-		}
+		always{echo 'always'}
+		success{echo 'success'}
+		failure{echo 'failure'}
+		changed{echo 'changed'}
 	}
 	
 }
